@@ -73,8 +73,8 @@ img {
 .showcase {
   grid-area: showcase;
   min-height: 400px;
-  background: linear-gradient(black, black), url(./img/img-2.jpg);
-  background-blend-mode: soft-light;
+  background: url(./img/img-2.jpg);
+/*   background-blend-mode: soft-light; */
   background-size: cover;
   background-position: center;
   padding: 3rem;
