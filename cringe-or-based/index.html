@@ -16,7 +16,8 @@
             --border: #2A2A2A;
         }
         body {
-            background-color: var(--bg);
+            /* Соковитий градієнтний фон замість плоского чорного */
+            background: radial-gradient(circle at 50% 0%, #1a1a1a 0%, var(--bg) 60%);
             color: var(--text);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
@@ -30,48 +31,31 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 40px 20px 40px;
+            padding: 60px 20px 40px;
             max-width: 800px;
         }
-        .logo-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        
+        /* ГОРИЗОНТАЛЬНИЙ ЛОГОТИП (Як на Privacy) */
         h1 {
             font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem; /* Оптимальний розмір, щоб влізло на екрани телефонів */
             font-weight: 700;
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            text-align: center;
+            display: block; /* Повертаємо в один рядок */
         }
+        h1 span.c { color: var(--cringe); }
+        h1 span.o { color: var(--text); font-size: 2rem; margin: 0 8px; text-transform: lowercase; }
+        h1 span.b { color: var(--based); }
         
-        h1 span.c { 
-            color: var(--cringe);
-            font-size: 50px;
-            line-height: 60px;
-            letter-spacing: -1.6px;
-        }
-        
-        h1 span.o { 
-            color: var(--text); 
-            font-size: 30px;
-            line-height: 34px;
-            margin-left: 10px;
-            letter-spacing: 0px;
-        }
-        
-        h1 span.b { 
-            color: var(--based);
-            font-size: 50px;
-            line-height: 60px;
-            letter-spacing: -1.6px;
-        }
-        
+        /* Опис під логотипом */
         .subtitle {
             color: var(--text);
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
             margin-bottom: 15px;
         }
@@ -81,34 +65,40 @@
             font-size: 1.1rem;
             margin-bottom: 40px;
             line-height: 1.5;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* App Store Button */
+        /* Преміальна кнопка App Store */
         .download-btn {
             display: inline-block;
             background-color: var(--text);
             color: var(--bg);
-            padding: 15px 40px;
+            padding: 16px 45px;
             border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.2rem;
+            font-weight: 900;
+            font-size: 1.1rem;
             text-decoration: none;
-            transition: transform 0.2s;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
             margin-bottom: 50px;
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
         }
         .download-btn:hover {
-            transform: scale(1.05);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
         }
 
         /* Video/Mockup Container */
         .mockup-container {
             width: 100%;
-            max-width: 300px;
+            max-width: 280px;
             margin: 0 auto 60px;
             border-radius: 40px;
             overflow: hidden;
-            border: 8px solid var(--surface);
-            box-shadow: 0 20px 50px rgba(0,255,85,0.05);
+            border: 6px solid var(--surface);
+            box-shadow: 0 20px 50px rgba(0, 255, 85, 0.1), 0 0 0 1px var(--border);
             background-color: var(--bg);
         }
         .mockup-container video {
@@ -116,10 +106,10 @@
             display: block;
         }
 
-        /* Features Grid */
+        /* Живі картки (Features Grid) */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             max-width: 900px;
             padding: 0 20px 60px;
@@ -132,13 +122,18 @@
             border-radius: 20px;
             padding: 30px;
             text-align: left;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #444;
         }
         .feature-card h3 { 
             margin-top: 0; 
             font-size: 1.4rem; 
             color: var(--text);
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
         }
         .feature-card p, .feature-card ul { 
             color: var(--muted); 
@@ -160,39 +155,47 @@
             margin-top: auto;
             width: 100%;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             border-top: 1px solid var(--border);
             color: var(--muted);
             font-size: 0.9rem;
             box-sizing: border-box;
+            background-color: #050505;
         }
         .footer .disclaimer {
             font-style: italic;
             margin-bottom: 20px;
             font-size: 0.8rem;
-            opacity: 0.7;
+            opacity: 0.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .footer a {
             color: var(--muted);
             text-decoration: none;
             margin: 0 10px;
+            transition: color 0.2s;
         }
         .footer a:hover {
             color: var(--text);
             text-decoration: underline;
+        }
+
+        /* Адаптація шрифту для дуже маленьких екранів */
+        @media (max-width: 400px) {
+            h1 { font-size: 2.8rem; }
+            h1 span.o { font-size: 1.6rem; margin: 0 5px; }
         }
     </style>
 </head>
 <body>
 
     <div class="hero">
-        <div class="logo-wrapper">
-            <h1>
-                <span class="c">CRINGE</span>
-                <span class="o">_OR_</span>
-                <span class="b">BASED</span>
-            </h1>
-        </div>
+        <h1>
+            <span class="c">CRINGE</span><span class="o">or</span><span class="b">BASED</span>
+        </h1>
+        
         <div class="subtitle">Swipe memes & check your Aura</div>
         <p class="promo-text">What's your true Aura Score? Swipe left for Cringe, right for Based. Generate wild AI meme stories and export them as viral GIFs!</p>
         
