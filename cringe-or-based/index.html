@@ -33,13 +33,17 @@
             padding: 80px 20px 40px;
             max-width: 800px;
         }
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         h1 {
             font-family: 'Oswald', sans-serif;
             font-weight: 700;
             margin-bottom: 20px;
             display: flex;
             flex-direction: column;
-            align-items: center; 
         }
         
         h1 span.c { 
@@ -181,11 +185,13 @@
 <body>
 
     <div class="hero">
-        <h1>
-            <span class="c">CRINGE</span>
-            <span class="o">_OR_</span>
-            <span class="b">BASED</span>
-        </h1>
+        <div class="logo-wrapper">
+            <h1>
+                <span class="c">CRINGE</span>
+                <span class="o">_OR_</span>
+                <span class="b">BASED</span>
+            </h1>
+        </div>
         <div class="subtitle">Swipe memes & check your Aura</div>
         <p class="promo-text">What's your true Aura Score? Swipe left for Cringe, right for Based. Generate wild AI meme stories and export them as viral GIFs!</p>
         
