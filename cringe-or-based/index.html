@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRINGE or BASED - The Ultimate Aura Check</title>
+    <title>Cringe or Based - AI Lore</title>
     <style>
         :root {
             --bg: #0A0A0A;
@@ -45,9 +45,17 @@
         h1 span.b { color: var(--based); }
         
         .subtitle {
+            color: var(--text);
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .promo-text {
             color: var(--muted);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 40px;
+            line-height: 1.5;
         }
 
         /* App Store Button */
@@ -75,7 +83,7 @@
             border-radius: 40px;
             overflow: hidden;
             border: 8px solid var(--surface);
-            box-shadow: 0 20px 50px rgba(0,255,85,0.1);
+            box-shadow: 0 20px 50px rgba(0,255,85,0.05);
             background-color: var(--bg);
         }
         .mockup-container video {
@@ -83,28 +91,44 @@
             display: block;
         }
 
-        /* Features */
+        /* Features Grid */
         .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             max-width: 900px;
             padding: 0 20px 60px;
+            width: 100%;
+            box-sizing: border-box;
         }
         .feature-card {
             background-color: var(--surface);
             border: 1px solid var(--border);
             border-radius: 20px;
             padding: 30px;
-            flex: 1 1 250px;
-            text-align: center;
+            text-align: left;
         }
-        .feature-card h3 { margin-top: 0; font-size: 1.5rem; }
-        .feature-card p { color: var(--muted); }
+        .feature-card h3 { 
+            margin-top: 0; 
+            font-size: 1.4rem; 
+            color: var(--text);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+        }
+        .feature-card p, .feature-card ul { 
+            color: var(--muted); 
+            line-height: 1.6;
+        }
+        .feature-card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        .feature-card li {
+            margin-bottom: 8px;
+        }
         
-        .c-text { color: var(--cringe); }
-        .b-text { color: var(--based); }
+        .c-text { color: var(--cringe); font-weight: bold; }
+        .b-text { color: var(--based); font-weight: bold; }
 
         /* Footer */
         .footer {
@@ -115,6 +139,13 @@
             border-top: 1px solid var(--border);
             color: var(--muted);
             font-size: 0.9rem;
+            box-sizing: border-box;
+        }
+        .footer .disclaimer {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+            opacity: 0.7;
         }
         .footer a {
             color: var(--muted);
@@ -131,7 +162,8 @@
 
     <div class="hero">
         <h1><span class="c">CRINGE</span><span class="o">or</span><span class="b">BASED</span></h1>
-        <p class="subtitle">The AI-powered game that checks your aura. Make choices, build absurd stories, and find out if you belong in Horny Jail or the Hall of Fame.</p>
+        <div class="subtitle">Swipe memes & check your Aura</div>
+        <p class="promo-text">What's your true Aura Score? Swipe left for Cringe, right for Based. Generate wild AI meme stories and export them as viral GIFs!</p>
         
         <a href="#" class="download-btn">Download on the App Store </a>
     </div>
@@ -139,31 +171,49 @@
     <div class="mockup-container">
         <video autoplay loop muted playsinline>
             <source src="demo.mp4" type="video/mp4">
-            </video>
+        </video>
     </div>
 
     <div class="features">
         <div class="feature-card">
-            <h3 class="c-text">Generate Chaos</h3>
-            <p>Input any prompt. Our AI will craft an insane, multi-step scenario for you to navigate.</p>
+            <h3>🎮 Two Game Modes</h3>
+            <p><strong>Classic Base:</strong> Play our signature, hand-crafted stories with custom meme GIFs. Perfect to get started!</p>
+            <p><strong>AI Generator:</strong> Type any wild idea, and the AI will generate a unique 4-frame story, automatically matching it with epic meme reactions from Giphy.</p>
         </div>
+
         <div class="feature-card">
-            <h3 class="b-text">Check Your Aura</h3>
-            <p>Swipe through decisions. Are your choices completely cringe, or undeniably based?</p>
+            <h3>⚖️ How It Works</h3>
+            <ul>
+                <li><strong>Read & Watch:</strong> You get a bizarre situation and a GIF reaction.</li>
+                <li><strong>Make a Choice:</strong> Swipe Left (<span class="c-text">CRINGE</span>) or Right (<span class="b-text">BASED</span>).</li>
+                <li><strong>Escalate the Absurdity:</strong> Every choice leads to even more chaos in the next frame.</li>
+            </ul>
         </div>
+
         <div class="feature-card">
-            <h3 style="color: var(--text)">Share the Verdict</h3>
-            <p>Export your results instantly as a flashy video to TikTok, Insta, or your group chat.</p>
+            <h3>📸 Get Your Aura Check</h3>
+            <p>At the end of the game, you'll receive an epic personalized result card:</p>
+            <ul>
+                <li>Your unique Cringe Score (from 1 to 9999).</li>
+                <li>A Badge and AI Verdict (Are you an NPC or a brainrot king?).</li>
+                <li>A visual collage of all your choices.</li>
+            </ul>
+        </div>
+
+        <div class="feature-card">
+            <h3>🚀 Share in One Click!</h3>
+            <p>Don't keep this madness to yourself. The app automatically generates a cool video (MP4) with your AURA CHECK card. Drop it directly into TikTok, Instagram Reels, or Telegram, and compete with friends.</p>
         </div>
     </div>
 
     <div class="footer">
-      <p>© 2026 Oleksii Demchenko. All rights reserved.</p>
-      <div>
-          <a href="https://alexdemche.github.io/cringe-or-based-legal/">Privacy Policy & Terms of Service</a>
-          <a href="mailto:stoic.labs.dev@gmail.com">Support</a>
-      </div>
-  </div>
+        <p class="disclaimer">Disclaimer: This app is designed purely for entertainment purposes. All AI content is generated by algorithms.</p>
+        <p>© 2026 Oleksii Demchenko. All rights reserved.</p>
+        <div>
+            <a href="https://alexdemche.github.io/cringe-or-based-legal/">Privacy Policy & Terms of Service</a>
+            <a href="mailto:stoic.labs.dev@gmail.com">Support</a>
+        </div>
+    </div>
 
 </body>
 </html>
