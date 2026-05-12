@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRINGE or BASED - The Ultimate Aura Check</title>
+    <style>
+        :root {
+            --bg: #0A0A0A;
+            --surface: #141414;
+            --text: #F2F2F2;
+            --muted: #888888;
+            --based: #00FF55;
+            --cringe: #FF0055;
+            --border: #2A2A2A;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 40px;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+        h1 span.c { color: var(--cringe); }
+        h1 span.o { color: var(--text); font-size: 2rem; }
+        h1 span.b { color: var(--based); }
+        
+        .subtitle {
+            color: var(--muted);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        /* App Store Button */
+        .download-btn {
+            display: inline-block;
+            background-color: var(--text);
+            color: var(--bg);
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: transform 0.2s;
+            margin-bottom: 50px;
+        }
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Video/Mockup Container */
+        .mockup-container {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 60px;
+            border-radius: 40px;
+            overflow: hidden;
+            border: 8px solid var(--surface);
+            box-shadow: 0 20px 50px rgba(0,255,85,0.1);
+            background-color: var(--bg);
+        }
+        .mockup-container video {
+            width: 100%;
+            display: block;
+        }
+
+        /* Features */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            padding: 0 20px 60px;
+        }
+        .feature-card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            flex: 1 1 250px;
+            text-align: center;
+        }
+        .feature-card h3 { margin-top: 0; font-size: 1.5rem; }
+        .feature-card p { color: var(--muted); }
+        
+        .c-text { color: var(--cringe); }
+        .b-text { color: var(--based); }
+
+        /* Footer */
+        .footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: var(--muted);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            color: var(--text);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1><span class="c">CRINGE</span><span class="o">or</span><span class="b">BASED</span></h1>
+        <p class="subtitle">The AI-powered game that checks your aura. Make choices, build absurd stories, and find out if you belong in Horny Jail or the Hall of Fame.</p>
+        
+        <a href="#" class="download-btn">Download on the App Store </a>
+    </div>
+
+    <div class="mockup-container">
+        <video autoplay loop muted playsinline>
+            <source src="demo.mp4" type="video/mp4">
+            </video>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">
+            <h3 class="c-text">Generate Chaos</h3>
+            <p>Input any prompt. Our AI will craft an insane, multi-step scenario for you to navigate.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="b-text">Check Your Aura</h3>
+            <p>Swipe through decisions. Are your choices completely cringe, or undeniably based?</p>
+        </div>
+        <div class="feature-card">
+            <h3 style="color: var(--text)">Share the Verdict</h3>
+            <p>Export your results instantly as a flashy video to TikTok, Insta, or your group chat.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+      <p>© 2026 Oleksii Demchenko. All rights reserved.</p>
+      <div>
+          <a href="https://alexdemche.github.io/cringe-or-based-legal/">Privacy Policy & Terms of Service</a>
+          <a href="mailto:stoic.labs.dev@gmail.com">Support</a>
+      </div>
+  </div>
+
+</body>
+</html>
